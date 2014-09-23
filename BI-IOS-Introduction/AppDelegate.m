@@ -16,6 +16,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+  /*  self.window = nil;
+    [self window]
+    [self setWindow:nil];
+    [self.window setBackgroundColor:[UIColor redColor]];
+    
+    */
+    
+    
     // Override point for customization after application launch.
     return YES;
 }
