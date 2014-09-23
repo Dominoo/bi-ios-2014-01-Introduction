@@ -10,14 +10,29 @@
 
 @interface ViewController ()
 
+@property (nonatomic,weak) UIView* myView;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIView* v = [[UIView alloc] initWithFrame:CGRectMake(10, 30, 50, 50)];
+    v.backgroundColor = [UIColor redColor];
+    [self.view addSubview:v];
+    self.myView = v;
+    
+    [self myMethod:@"Ahoj BI-IOS2"];
+    
 }
+
+- (void) myMethod:(NSString*) stringToDisplay {
+    NSLog(stringToDisplay);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
